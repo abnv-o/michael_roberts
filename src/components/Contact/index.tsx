@@ -27,7 +27,7 @@ const Contact = () => {
                 <input
                   type="text"
                   placeholder="Enter your name"
-                  className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                  className="border-stroke w-full rounded-xl border border-[#2C303B] bg-[#2C303B] px-6 py-3 text-base text-body-color outline-none focus:border-violet-500  "
                 />
               </div>
             </div>
@@ -35,14 +35,14 @@ const Contact = () => {
               <div className="mb-8">
                 <label
                   htmlFor="email"
-                  className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                  className="mb-3 block text-sm font-medium text-dark "
                 >
                   Your Email
                 </label>
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                  className="border-stroke w-full rounded-xl border border-[#2C303B] bg-[#2C303B] px-6 py-3 text-base  outline-none focus:border-violet-500  "
                 />
               </div>
             </div>
@@ -58,12 +58,12 @@ const Contact = () => {
                   name="message"
                   rows={5}
                   placeholder="Enter your Message"
-                  className="border-stroke w-full resize-none rounded-sm border border-transparent bg-[#2C303B] text-body-color-dark shadow-two focus:border-primary focus:shadow-none"
+                  className="border-stroke w-full rounded-xl border border-[#2C303B] bg-[#2C303B] px-6 py-3 text-base  outline-none focus:border-violet-500  "
                 ></textarea>
               </div>
             </div>
             <div className="w-full px-4">
-              <button className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
+              <button className="rounded-xl bg-violet-500 px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
                 Submit
               </button>
             </div>

@@ -5,9 +5,9 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <footer className="relative mx-4 z-10 pt-16 bg-gray-dark md:pt-20 lg:pt-24">
+      <footer className="relative  z-10 pt-16 bg-gray-dark md:pt-20 lg:pt-24">
         <div className="container  ">
-          <div className="flex flex-col w-screen lg:flex lg:flex-row  ">
+          <div className="flex flex-col w-full lg:flex lg:flex-row  ">
           
             
               <div className="mb-12 max-w-80 lg:mb-16">
@@ -33,6 +33,7 @@ const Footer = () => {
                       viewBox="0 0 22 22"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      className=""
                     >
                       <path
                         d="M12.1 10.4939V7.42705C12.1 6.23984 13.085 5.27741 14.3 5.27741H16.5V2.05296L13.5135 1.84452C10.9664 1.66676 8.8 3.63781 8.8 6.13287V10.4939H5.5V13.7183H8.8V20.1667H12.1V13.7183H15.4L16.5 10.4939H12.1Z"
@@ -106,14 +107,14 @@ const Footer = () => {
 
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-white">
+                <h2 className="mb-10 text-xl font-bold text-white ">
                   Support & Help
                 </h2>
                 <ul>
                   <li>
                     <Link
                       href="/contact"
-                      className="mb-4 inline-block text-base text-body-color-dark hover:text-primary"
+                      className="mb-4 inline-block text-base text-body-color-dark hover:text-violet-800"
                     >
                       Contact Us
                     </Link>
@@ -122,7 +123,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/about"
-                      className="mb-4 inline-block text-base text-body-color-dark hover:text-primary"
+                      className="mb-4 inline-block text-base text-body-color-dark hover:text-violet-800"
                     >
                       About
                     </Link>

@@ -15,7 +15,7 @@ const Hero = () => {
               </h1>
               <h1 className="text-4xl lg:text-6xl ">
                 <span className=" animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">
-                  we redefine
+                  We Redefine
                 </span>{" "}
                 the <br></br> fate of outstanding products
               </h1>
