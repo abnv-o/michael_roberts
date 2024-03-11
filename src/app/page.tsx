@@ -5,7 +5,7 @@ import Contact from "@/components/Contact";
 import Why from "@/components/Why";
 import Hero from "@/components/Hero";
 import { Metadata } from "next";
-import Testimonials from "@/components/Testimonials";
+
 
 export const metadata: Metadata = {
   title: "Micheal Roberts",
@@ -22,7 +22,7 @@ export default function Home() {
      
       <AboutSectionOne />
       <AboutSectionTwo />
-      <Testimonials/>
+      
       <Contact />
     </>
   );
