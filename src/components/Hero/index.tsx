@@ -20,16 +20,11 @@ const Hero = () => {
                 the <br></br> fate of outstanding products
               </h1>
             </div>
-              {/* video */}
+            {/* video */}
             <div className=" pt-6">
-              <div className="relative mx-auto rounded-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">
-                <div className="rounded-xl overflow-hidden h-[172px] md:h-[262px]">
-                  <video
-                    autoPlay
-                    muted
-                    preload="none"
-                    className=""
-                  >
+              <div className="relative mx-auto h-[172px] max-w-[301px] rounded-xl md:h-[294px] md:max-w-[512px]">
+                <div className="h-[172px] overflow-hidden rounded-xl md:h-[262px]">
+                  <video autoPlay muted preload="none" className="">
                     <source
                       className="w-full"
                       src="/images/video/mr2.mp4"
@@ -39,8 +34,6 @@ const Hero = () => {
                   </video>
                 </div>
               </div>
-             
-              
             </div>
           </div>
         </div>
