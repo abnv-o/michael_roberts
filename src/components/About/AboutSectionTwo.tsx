@@ -1,8 +1,26 @@
+"use client"
+import { motion,useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
+import { useRef } from "react";
 import Image from "next/image";
 
 const AboutSectionTwo = () => {
+
+  const ref = useRef<HTMLElement>(null)
+  const {scrollYProgress} = useScroll({
+     target: ref,
+     offset:["1 0","0 0.3 "]
+   });
+ 
+  const scaleProgress = useTransform(scrollYProgress,[0,1],[0.5,1]);
+
+
   return (
-    <section className="py-16 md:py-20 lg:py-28">
+    <motion.section ref={ref} style={{
+      scale: scaleProgress,
+      opacity: scaleProgress,
+      
+    }} className="py-16 md:py-20 lg:py-28">
       <div className="container">
         <div className="rounded-3xl bg-gray-300  bg-opacity-20 bg-clip-padding px-8 py-8 text-gray-300 backdrop-blur-sm backdrop-filter">
         <div className="-mx-4 flex flex-wrap items-center">
@@ -69,7 +87,7 @@ const AboutSectionTwo = () => {
         </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

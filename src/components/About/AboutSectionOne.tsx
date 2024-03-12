@@ -1,5 +1,10 @@
-import Image from "next/image";
+"use client"
+import { motion,useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
+import { useRef } from "react";import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+
+
 
 const checkIcon = (
   
@@ -18,11 +23,23 @@ const AboutSectionOne = () => {
     </p>
   );
 
+  const ref = useRef<HTMLElement>(null)
+  const {scrollYProgress} = useScroll({
+     target: ref,
+     offset:["1 0","0 0.3 "]
+   });
+ 
+  const scaleProgress = useTransform(scrollYProgress,[0,1],[0.5,1]);
+
   return (
-    <section id="about" className="pt-16 md:pt-20 lg:pt-28">
-      <div className="container">
-      <div className="rounded-3xl bg-gray-300  bg-opacity-20 bg-clip-padding px-8 py-8 text-gray-300 backdrop-blur-sm backdrop-filter">
-        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+    <motion.section ref={ref} style={{
+      scale: scaleProgress,
+      opacity: scaleProgress,
+      
+    }} id="about" className="pt-16 md:pt-20 lg:pt-28">
+      <div  className="container">
+      <div  className="rounded-3xl bg-gray-300  bg-opacity-20 bg-clip-padding px-8 py-8 text-gray-300 backdrop-blur-sm backdrop-filter">
+        <div  className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
@@ -71,7 +88,7 @@ const AboutSectionOne = () => {
         </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,13 +1,31 @@
+"use client"
+import { motion,useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
+import { useRef } from "react";
+
 
 const Hero = () => {
+  const ref = useRef<HTMLDivElement>(null)
+ const {scrollYProgress} = useScroll({
+    target: ref,
+    offset:["1 0","0 0.3"]
+  });
+
+ const scaleProgress = useTransform(scrollYProgress,[0,1],[0.5,1]);
+
   return (
     <>
-      <section
+      <section 
         id="home"
         className="relative overflow-hidden pb-16 pt-32 md:pb-32 md:pt-36 lg:bottom-12 xl:pb-40 xl:pt-44 2xl:pb-48 2xl:pt-52"
       >
-        <div className="container">
+        <motion.div  className="container"
+        ref={ref}
+        style={{
+          scale: scaleProgress,
+          opacity: scrollYProgress
+        }}
+        >
           <div className="flex h-full w-full flex-col items-center justify-center gap-4 rounded-3xl bg-gray-300  bg-opacity-20 bg-clip-padding px-8 py-8 text-gray-300 backdrop-blur-sm backdrop-filter lg:flex lg:flex-row lg:justify-around  ">
             <div className="lg:w-1/2 lg:p-8  ">
               <h1 className="text-5xl font-bold lg:text-8xl ">
@@ -21,22 +39,25 @@ const Hero = () => {
               </h1>
             </div>
             {/* video */}
-            <div className=" pt-6">
-              <div className="relative mx-auto h-[172px] max-w-[301px] rounded-xl md:h-[294px] md:max-w-[512px]">
-                <div className="h-[172px] overflow-hidden rounded-xl md:h-[262px]">
-                  <video autoPlay muted preload="none" className="">
+            
+        <div className="flex flex-col justify-center items-center">    
+<div className="relative mx-auto lg:border-gray-500  lg:bg-gray-500 lg:border-4 rounded-xl h-[172px] max-w-[301px] md:h-80 md:max-w-[512px]">
+    <div className="rounded-xl overflow-hidden h-[140px] md:h-96">
+    <video autoPlay muted preload="none">
                     <source
-                      className="w-full"
+                      className="w-full h-full "
                       src="/images/video/mr2.mp4"
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.
                   </video>
-                </div>
-              </div>
-            </div>
+    </div>
+</div>
+<div className="hidden lg:flex lg:bg-gray-500 lg:w-48 lg:h-2 lg:rounded-xl lg:mt-4"></div>
+</div>
+
           </div>
-        </div>
+        </motion.div>
 
         {/* Aesthetics */}
         <div className="absolute right-0 top-0 -z-[10] opacity-30 lg:opacity-100">

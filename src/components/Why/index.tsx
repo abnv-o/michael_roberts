@@ -1,10 +1,29 @@
+"use client"
+import { motion,useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
+import { useRef } from "react";
+
 
 
 const Features = () => {
+
+  const ref = useRef<HTMLDivElement>(null)
+ const {scrollYProgress} = useScroll({
+    target: ref,
+    offset:["1 0","0 0.3"]
+  });
+
+ const scaleProgress = useTransform(scrollYProgress,[0,1],[0.5,1]);
+
   return (
+    
     <>
       <section id="features" className="py-16 md:py-20 lg:py-28">
-        <div className="container">
+        <motion.div ref={ref}
+        style={{
+          scale: scaleProgress,
+          opacity: scrollYProgress,
+        }} className="container">
           <div className="flex flex-col justify-center gap-8 rounded-3xl bg-gray-300  bg-opacity-20 bg-clip-padding px-8 py-8 text-gray-300 backdrop-blur-sm backdrop-filter lg:flex lg:flex-row ">
             {/* text */}
             <div className="flex flex-col justify-center gap-8 lg:w-1/2">
@@ -29,7 +48,7 @@ const Features = () => {
               </div>
           </div>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );
