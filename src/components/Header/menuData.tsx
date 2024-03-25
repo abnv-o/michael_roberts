@@ -15,8 +15,8 @@ const menuData: Menu[] = [
   },
   {
     id: 33,
-    title: "Our Goals",
-    path: "/goals",
+    title: "Why MR",
+    path: "/why",
     newTab: false,
   },
   {

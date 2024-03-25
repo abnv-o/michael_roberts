@@ -49,15 +49,17 @@ const Header = () => {
       >
         <div className="container">
           <div className="relative mx-4  flex items-center justify-between">
-            <div className="w-60 max-w-full px-4 xl:mr-12">
+            <div className="justify-center items-center w-60 max-w-full px-4 xl:mr-12">
               <Link
                 href="/"
                 className={`header-logo block w-full ${
                   sticky ? "py-5 lg:py-2" : "py-8"
                 } `}
               >
-                <h1 className="text-4xl text-white tracking-widest font-bold">MR</h1>
-                <h1 className="text-white tracking-wide ">Micheal Roberts</h1>
+                <div className="flex flex-col  items-center justify-center">
+                <img src="/images/logo.png" alt="logo" className="w-16 h-auto" />
+                <h1 className="text-xs">THE REMANUFACTURER</h1>
+                </div>
               </Link>
             </div>
             <div className="flex  items-center justify-around">

@@ -28,14 +28,14 @@ const Hero = () => {
         >
           <div className="flex h-full w-full flex-col items-center justify-center gap-4 rounded-3xl bg-gray-300  bg-opacity-20 bg-clip-padding px-8 py-8 text-gray-300 backdrop-blur-sm backdrop-filter lg:flex lg:flex-row lg:justify-around  ">
             <div className="lg:w-1/2 lg:p-8  ">
-              <h1 className="text-5xl font-bold lg:text-8xl ">
+              <h1 className="text-5xl font-bold lg:text-8xl animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent ">
                 Michael Roberts
               </h1>
-              <h1 className="text-4xl lg:text-6xl ">
-                <span className=" animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">
-                  We Redefine
-                </span>{" "}
-                the <br></br> fate of outstanding products
+              <h1 className="text-4xl lg:text-5xl text-white ">
+              Whether New-Build Or Remanufactured, You Can Count On MR Quality
+
+
+                
               </h1>
             </div>
             {/* video */}
