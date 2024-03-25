@@ -2,6 +2,7 @@
 import { motion,useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { useRef } from "react";
+import Image from "next/image";
 
 
 
@@ -40,13 +41,10 @@ const Features = () => {
           </p>
           </div>
           {/* img */}
-          <div className="flex justify-center items-center lg:h-96">
-          <div className="relative mx-auto rounded-xl h-[172px] lg:h-[262px] max-w-[301px]  md:max-w-[512px]">
-                <div className="rounded-xl overflow-hidden h-[262px] md:h-[262px]">
-                 <img src="/mr3.png" className="w-full"></img>
-                </div>
-              </div>
-          </div>
+          <div className="flex justify-center items-center lg:h-auto w-full lg:w-1/2">
+          
+                <Image src="/mr3.png"  layout="responsive" width={500} height={300} alt="image" />
+           </div>
           </div>
         </motion.div>
       </section>

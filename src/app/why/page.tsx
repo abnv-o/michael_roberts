@@ -41,7 +41,7 @@ const page = () => {
               </span>{" "}
               <br />
               No other aftermarket company in the imaging industry can rival the
-              depth and breadth of MR's product offering specifically tailored
+              depth and breadth of MR product offering specifically tailored
               for printers. We provide a comprehensive range of printer
               consumables, parts, and supplies across various printer platforms.
               From toner cartridges to maintenance kits, MR ensures that

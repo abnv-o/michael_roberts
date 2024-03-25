@@ -57,7 +57,7 @@ const Header = () => {
                 } `}
               >
                 <div className="flex flex-col  items-center justify-center">
-                <img src="/images/logo.png" alt="logo" className="w-16 h-auto" />
+                <Image src="/images/logo.png" alt="logo" className="w-16 h-auto" />
                 <h1 className="text-xs">THE REMANUFACTURER</h1>
                 </div>
               </Link>
